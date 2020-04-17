@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #062863;
+    width: 100%;
+    height: auto;
+    font-family: 'Karla', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+    overflow: auto;
+    background-attachment: fixed;
+    background-image: url('../images/pigg.png'), url('../images/pig.png'), url('../images/piggy.png'), url('../images/piggyy.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: right -5% bottom -5%, right -7% top 1%, left -5% bottom -5%, left -1% top -5%;
+    background-size: 15%, 15%, 15%, 15%;
+}
+
+.form {
+    width: 450px;
+    height: 820px;
+    background: #ffffff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .logo {
+    margin: 50px 0;
+}
+
+.form .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form .title h1 {
+    color: #0846a0;
+    font-size: 24px;
+}
+
+.form .title p {
+    color: #c6beb4;
+    font-size: 14px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 20px;
+}
+
+form label h1 {
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #4a5669;
+}
+
+form input {
+    width: 350px;
+    padding: 12px;
+    height: 55px;
+    background: #edf2f7;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #a1afc5;
+}
+
+select {
+    width: 350px;
+    padding: 12px;
+    height: 55px;
+    background: #edf2f7;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+
+form input::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: #a1afc5;
+}
+
+button {
+    background-color: rgba(8, 62, 158, 0.85);
+    width: 370px;
+    height: 60px;
+    border: 0 solid #e2e8f0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 40px;
+    transition: 0.4s ease;
+    text-indent: 0px;
+    text-shadow: none;
+    line-height: inherit;
+    overflow: visible;
+}
+
+button:hover {
+    background-color: #083e9e;
+}
+
+.link {
+    margin: 50px 0;
+}
+
+.link a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #ffffff;
+    transition: 0.4s ease;
+}
+
+.link a:hover {
+    color: #818181;
+}
+
+@media only screen and (max-width:700px) {
+    form input,
+    select,
+    button {
+        width: 300px;
+    }
+}
