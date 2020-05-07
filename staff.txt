@@ -1,0 +1,4 @@
+staff = [
+    {'username':'austin',
+    'password':"austinforreal"}
+]

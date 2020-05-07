@@ -14,7 +14,7 @@ startButton.addEventListener('click', startGame);
 nextBtn.addEventListener('click', () => {
     currentQuestion++;
     nextQuestion();
-})
+});
 
 function startGame() {
     questionContainer.classList.remove('hide');
@@ -23,7 +23,7 @@ function startGame() {
     startButton.classList.add('hide');
 
     currentQuestion = 0;
-    questionCheck = questions.sort(() => Math.random() - 0.5);
+    questionCheck = questions.sort();
     nextQuestion();
 
 }
@@ -58,10 +58,11 @@ function showQuestion(question) {
         button.addEventListener('click', () => {
 
             nextBtn.classList.remove('hide');
-            this.onclick = null;
+
             if (answer.correct) {
                 button.classList.add('correct');
                 scoreCounter.innerText = score += 1;
+
 
             } else {
                 button.classList.add('wrong');
@@ -80,8 +81,8 @@ function showQuestion(question) {
             nextBtn.classList.add('hide');
 
             startButton.addEventListener('click', () => {
-                scoreCounter.reset();
-                startGame()
+                scoreCounter.innerText = 0;
+                startGame();
             });
         }
 
