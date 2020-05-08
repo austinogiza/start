@@ -41,7 +41,6 @@ function nextQuestion() {
 }
 
 function showQuestion(question) {
-
     questionHeader.innerText = question.question;
     question.answer.forEach(answer => {
         const button = document.createElement('button');
@@ -50,7 +49,6 @@ function showQuestion(question) {
 
         if (answer.correct) {
             button.dataset.correct = answer.correct;
-
 
         }
         answerContainer.appendChild(button);
@@ -70,20 +68,15 @@ function showQuestion(question) {
 
         });
 
-        if (questionCheck.length > currentQuestion + 1) {
+        if (currentQuestion > questionCheck.length) {
 
-            nextBtn.classList.add('hide');
 
+            endScreen();
+            // currentQuestion++;
 
         } else {
-            startButton.innerText = 'Restart';
-            startButton.classList.remove('hide');
             nextBtn.classList.add('hide');
 
-            startButton.addEventListener('click', () => {
-                scoreCounter.innerText = 0;
-                startGame();
-            });
         }
 
 
@@ -94,8 +87,15 @@ function showQuestion(question) {
 
 }
 
-function answer() {
+function endScreen() {
+    startButton.innerText = 'Restart';
+    startButton.classList.remove('hide');
+    nextBtn.classList.add('hide');
 
+    startButton.addEventListener('click', () => {
+        scoreCounter.innerText = 0;
+        startGame();
+    });
 
 }
 
@@ -180,3 +180,5 @@ const questions = [{
         ]
     }
 ];
+
+console.log(questions.length);
