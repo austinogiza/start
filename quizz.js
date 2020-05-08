@@ -72,6 +72,7 @@ function showQuestion(question) {
 
 
             endScreen();
+
             // currentQuestion++;
 
         } else {
@@ -91,6 +92,8 @@ function endScreen() {
     startButton.innerText = 'Restart';
     startButton.classList.remove('hide');
     nextBtn.classList.add('hide');
+
+
 
     startButton.addEventListener('click', () => {
         scoreCounter.innerText = 0;
@@ -178,7 +181,11 @@ const questions = [{
                 correct: true
             }
         ]
-    }
+    },
+    {
+        question: 'Your Score Is',
+
+    },
 ];
 
 console.log(questions.length);
