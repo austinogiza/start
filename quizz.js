@@ -183,7 +183,7 @@ const questions = [{
         ]
     },
     {
-        question: 'Your Score Is',
+        question: 'You Scored',
 
     },
 ];
