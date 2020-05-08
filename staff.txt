@@ -1,4 +1,6 @@
 staff = [
     {'username':'austin',
-    'password':"austinforreal"}
+    'password':"austinforreal"},
+       {'username':'ose',
+    'password':"shalom"},
 ]

@@ -1,6 +1,7 @@
 import random
 import sys
 import os
+import pickle
 
 
 class Stafflogin():
@@ -27,7 +28,7 @@ class Stafflogin():
                     accountBalance = int(input("Opening Balance"))
                     accountType = input("Account Type")
                     accountEmail = input("Account email")
-                    accountNumber = random.randrange(300000, 23000009)
+                    accountNumber = random.randrange(3000000000, 3500000009)
                     self.customer.save(
                         str(accountName), str(accountBalance), str(
                             accountType), str(accountEmail), str(accountNumber))
